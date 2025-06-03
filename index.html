@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Huddle landing page with single introductory section</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome for social icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <style>
+    /* CSS Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Root Variables */
+    :root {
+      --violet: hsl(257, 40%, 49%);
+      --soft-magenta: hsl(300, 69%, 71%);
+      --white: hsl(0, 0%, 100%);
+    }
+
+    /* Base Styles */
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: var(--violet);
+      background-image: url('./images/bg-mobile.svg');
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-size: contain;
+      min-height: 100vh;
+      color: var(--white);
+      padding: 2rem 2.5rem;
+    }
+
+    /* Header */
+    .header {
+      margin-bottom: 4rem;
+    }
+
+    .logo {
+      width: 120px;
+      height: auto;
+    }
+
+    /* Main Content */
+    .main-content {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .illustration {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      margin-bottom: 3rem;
+    }
+
+    .content {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .title {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 1.5rem;
+      line-height: 1.5;
+      margin-bottom: 1rem;
+    }
+
+    .description {
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-bottom: 1.5rem;
+      opacity: 0.8;
+    }
+
+    .register-btn {
+      display: inline-block;
+      background-color: var(--white);
+      color: var(--violet);
+      text-decoration: none;
+      padding: 0.75rem 4rem;
+      border-radius: 2rem;
+      font-size: 0.875rem;
+      font-weight: 400;
+      box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    .register-btn:hover {
+      background-color: var(--soft-magenta);
+      color: var(--white);
+      transform: translateY(-2px);
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+    }
+
+    /* Social Icons */
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .social-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.5rem;
+      height: 2.5rem;
+      border: 1px solid var(--white);
+      border-radius: 50%;
+      color: var(--white);
+      text-decoration: none;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .social-icon:hover {
+      color: var(--soft-magenta);
+      border-color: var(--soft-magenta);
+      transform: translateY(-2px);
+    }
+
+    /* Attribution */
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+      opacity: 0.7;
+    }
+
+    .attribution a {
+      color: var(--soft-magenta);
+      text-decoration: none;
+    }
+
+    .attribution a:hover {
+      text-decoration: underline;
+    }
+
+    /* Desktop Styles */
+    @media (min-width: 768px) {
+      body {
+        background-image: url('./images/bg-desktop.svg');
+        background-size: cover;
+        padding: 3rem 5rem;
+      }
+
+      .header {
+        margin-bottom: 5rem;
+      }
+
+      .logo {
+        width: 200px;
+      }
+
+      .main-content {
+        display: flex;
+        align-items: center;
+        text-align: left;
+        gap: 3rem;
+        margin-bottom: 2rem;
+      }
+
+      .illustration {
+        flex: 1;
+        max-width: none;
+        margin-bottom: 0;
+      }
+
+      .content {
+        flex: 1;
+        max-width: none;
+        margin: 0;
+      }
+
+      .title {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .description {
+        font-size: 1.125rem;
+        margin-bottom: 2rem;
+      }
+
+      .register-btn {
+        padding: 1rem 4rem;
+        font-size: 1rem;
+      }
+
+      .social-icons {
+        justify-content: flex-end;
+        margin-bottom: 1rem;
+      }
+
+      .social-icon {
+        width: 3rem;
+        height: 3rem;
+        font-size: 1.25rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <img src="./images/logo.svg" alt="Huddle" class="logo">
+  </header>
+
+  <main class="main-content">
+    <img src="./images/illustration-mockups.svg" alt="Illustration" class="illustration">
+
+    <div class="content">
+      <h1 class="title">Build The Community Your Fans Will Love</h1>
+      <p class="description">
+        Huddle re-imagines the way we build communities. You have a voice, but so does your audience.
+        Create connections with your users as you engage in genuine discussion.
+      </p>
+      <a href="#" class="register-btn">Register</a>
+    </div>
+  </main>
+
+  <div class="social-icons">
+    <a href="#" class="social-icon" aria-label="Facebook">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="#" class="social-icon" aria-label="Twitter">
+      <i class="fab fa-twitter"></i>
+    </a>
+    <a href="#" class="social-icon" aria-label="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+  </div>
+
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Ayokanmi Adejola</a>.
+    </p>
+  </footer>
+</body>
+</html>
